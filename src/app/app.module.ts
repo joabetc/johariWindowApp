@@ -10,6 +10,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { QuizPage } from '../pages/quiz/quiz';
+import { QuestionComponent } from '../components/question/question';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -19,7 +20,8 @@ export function createTranslateLoader(http: HttpClient) {
   declarations: [
     MyApp,
     HomePage,
-    QuizPage
+    QuizPage,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,
