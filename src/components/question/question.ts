@@ -14,9 +14,12 @@ import { Question } from '../../model/question';
 export class QuestionComponent {
 
   @Input() question: Question;
+  points: number = 0;
 
-  constructor() {
-    console.log('Hello QuestionComponent Component');
+  constructor() { }
+
+  calculateAnswerPoints() {
+    this.question.answers[0].points = (5 - this.points);
+    this.question.answers[1].points = this.points;
   }
-
 }

@@ -13,9 +13,9 @@
         </ion-row>
       </ion-item>
       <ion-item>
-        <ion-range min="0" step="1" max="5" snaps="true">
-          <ion-label range-left>A</ion-label>
-          <ion-label range-right>B</ion-label>
+        <ion-range min="0" step="1" max="5" snaps="true" [(ngModel)]="points" (ionChange)="calculateAnswerPoints()">
+          <ion-label range-left><ion-badge>{{question.answers[0].points}}</ion-badge> A</ion-label>
+          <ion-label range-right>B <ion-badge>{{question.answers[1].points}}</ion-badge></ion-label>
         </ion-range>
       </ion-item>
     </ion-list>
