@@ -8,5 +8,5 @@
 
 
 <ion-content padding>
-  <question></question>
+    <question *ngFor="let question of questions" [question]="question"></question>
 </ion-content>
