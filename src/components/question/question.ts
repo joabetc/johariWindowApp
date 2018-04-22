@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Question } from '../../model/question';
 
 /**
  * Generated class for the QuestionComponent component.
@@ -12,11 +13,10 @@ import { Component } from '@angular/core';
 })
 export class QuestionComponent {
 
-  text: string;
+  @Input() question: Question;
 
   constructor() {
     console.log('Hello QuestionComponent Component');
-    this.text = 'Hello World';
   }
 
 }

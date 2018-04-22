@@ -2,20 +2,14 @@
 <div>
   <ion-card>
     <ion-card-header text-wrap>
-      <ion-badge>1</ion-badge> Caso um colega tenha um mau relacionamento com outro colaborador, cuja cooperação é fundamental para o bom desempenho do grupo, eu...
+      <ion-badge>{{question.id}}</ion-badge> {{question.text}}
     </ion-card-header>
   
     <ion-list>
-      <ion-item text-wrap>
+      <ion-item text-wrap *ngFor="let answer of question.answers">
         <ion-row>
-          <ion-col col-1>A</ion-col>
-          <ion-col>Falaria ao meu colega que ele é responsável em parte, pelo mau relacionamento com o outro e das consequências que isso está acarretando ao grupo.</ion-col>
-        </ion-row>
-      </ion-item>
-      <ion-item text-wrap>
-        <ion-row>
-          <ion-col col-1>B</ion-col>
-          <ion-col>Para não me aborrecer com ambos, simplesmente não faria qualquer comentário.</ion-col>
+          <ion-col col-1>{{answer.id}}</ion-col>
+          <ion-col>{{answer.text}}</ion-col>
         </ion-row>
       </ion-item>
       <ion-item>
