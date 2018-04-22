@@ -7,11 +7,13 @@ export const QUESTIONS: Question[] = [
     answers: [
       {
         id: 'A',
-        text: 'Falaria ao meu colega que ele é responsável em parte, pelo mau relacionamento com o outro e das consequências que isso está acarretando ao grupo.'
+        text: 'Falaria ao meu colega que ele é responsável em parte, pelo mau relacionamento com o outro e das consequências que isso está acarretando ao grupo.',
+        points: 0
       },
       {
         id: 'B',
-        text: 'Para não me aborrecer com ambos, simplesmente não faria qualquer comentário.'
+        text: 'Para não me aborrecer com ambos, simplesmente não faria qualquer comentário.',
+        points: 0
       }
     ]
   }
