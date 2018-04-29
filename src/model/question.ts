@@ -12,6 +12,15 @@ export class Question {
     this.answers[1].points = points;
   }
 
+  getPointsFor(option: string): Number {
+    return this.answers.filter((answer) => {
+      return answer.id === option;
+    })
+    .reduce((acc, answer) => {
+      return acc + answer.points;
+    }, 0);
+  }
+
   static fromJSONArray(json: QuestionJSON[]): Question[] {
     return json.map((value, index, arr) => {
       console.log(Question.fromJSON(value).calculateAnswerPoints);
