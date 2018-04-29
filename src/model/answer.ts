@@ -1,5 +1,5 @@
 export class Answer {
-  static MAX_POINTS_VALUE: number = 5;
+  static MAX_POINTS_VALUE: Number = 5;
 
   id: string;
   text: string;
