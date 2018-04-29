@@ -13,8 +13,7 @@ export class QuestionComponent {
 
   constructor() { }
 
-  calculateAnswerPoints() {
-    this.question.answers[0].points = (Answer.MAX_POINTS_VALUE.valueOf() - this.points);
-    this.question.answers[1].points = this.points;
+  calculateAnswerPoints(): void {
+    this.question.calculateAnswerPoints(this.points);
   }
 }
