@@ -1,6 +1,6 @@
 import { Question } from "./question";
 
-export const QUESTIONS: Question[] = [
+export const QUESTIONS: Question[] = <Question[]> Question.fromJSONArray([
   {
     id: 1, text: 'Caso um colega tenha um mau relacionamento com outro colaborador, cuja cooperação é fundamental para o bom desempenho do grupo, eu: ', answers: [{
       id: 'A', text: 'Falaria ao meu colega que ele é responsável em parte, pelo mau relacionamento com o outro e das conseqüências que isso está acarretando ao grupo.', points: 0
@@ -121,4 +121,4 @@ export const QUESTIONS: Question[] = [
     },
     { id: 'B', text: 'Abordaria com o grupo minhas deficiências e buscaria melhorar nosso relacionamento', points: 0 }]
   }
-]
+]);
